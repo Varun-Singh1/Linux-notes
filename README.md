@@ -1,7 +1,4 @@
 # Linux notes
- complete notes of linux
-
-=Linux
 
 It's old version is UNIX, likewise windows old version is DOS. it's development is related 1960-70
 
