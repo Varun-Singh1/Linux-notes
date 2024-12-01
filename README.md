@@ -75,5 +75,26 @@ Technically shell is user interface of linux, when we have to control it, comman
 
 11) Free of Cost -> Most Linux distributions are free to download and use, reducing costs for personal users and organizations.
 
+# Linux distributions
+
+
+
+
+
+
+# CentOS Installation
+
+
+
+
+
+# Directory structure of Linux
+
+
+
+
+# Remote shell
+
+
 
  
