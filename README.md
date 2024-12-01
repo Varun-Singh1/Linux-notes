@@ -2,15 +2,15 @@
 
 It's old version is UNIX, likewise windows old version is DOS. it's development is related 1960-70
 
--Unix:
+# UNIX
 
 Developed in the 1960's nd 70's at AT&T Bell Labs by Ken Thompson, Dennis Ritchie, and others.
 Designed as a portable, multi-tasking, and multi-user system.
 - The source code was proprietary, although it had many variants, including BSD ( Berkeley Software Distribution ) and commercial version like AIX, HP-UX, and Server environments.
 - Historically dominant in academic, enterprise, and Server environments.
 - Popular variants includes IBM AIX, HP-UX and Oracle solaris.
-Linux :
 
+# LINUX
 Created by Linus Torevalds in 1991, inspired by the Unix system but not directly derived from its code.
 It is an open-source operating system kernel licensed under the GNU General Public License ( GPL ).
 Often combined with GNU software to form a complete operating system ( GNU/LINUX ).
@@ -18,7 +18,7 @@ Widespread use across servers, desktop, embedded systems, and supercomputer s.
 -Popular distributions include Ubuntu, Fedora, CentOS, Debian, And Red Hat Enterprise Linux ( RHEL ).
 So Unix become a Linux overall there's a much difference.
 
-#What is operating system ?
+# What is operating system ?
 ~Operating system is a collection of programs that enables communication between computer Hardware and Software.
 
 Win=User > Application > OS > Hardware
@@ -30,7 +30,7 @@ Shell word come from that water shell 🐚 which have pearl inside.
 Technically shell is user interface of linux, when we have to control it, command it, operate it so we use shell. Number of shells comes in linux that we can use , for other purposes we have different shells here.
 
 
-#Functions of Operating System
+# Functions of Operating System
 
 1) Process Management
 
