@@ -1,6 +1,6 @@
 # Linux notes
 
-It's old version is UNIX, likewise windows old version is DOS. it's development is related 1960-70
+Its older version is UNIX, similar to how Windows' early version was DOS. Its development dates back to the 1960s and 1970s. 
 
 # UNIX
 
