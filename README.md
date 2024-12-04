@@ -89,15 +89,22 @@ Technically shell is user interface of linux, when we have to control it, comman
  3. id : Print user and group information for each specified USER, or (when USER omitted) for the current user.
  4. ls : List information about the FILEs (the current directory by default).Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
         Mandatory arguments to long options are mandatory for short options too.
- 5. cd(Change directory) :
- 6. Switches or Subcommands : 
-              a) -h,--help,help : it will give summarised information theoritically of commmands switches.      
+        ls -l :
+        ls -h , --human-readable : 
+        ls -a , --all : 
+        ls -R :
+        ls -t : 
+ 6. cd(Change directory)  : home of that user and if that user dont have its home directory then it deny i dont have home,
+                    cd .  : shows the current directory.
+                    cd .. : one folder out from the location.     
+ 8. Switches or Subcommands : 
+             a) -h,--help,help : it will give summarised information theoritically of commmands switches.      
              b) man : man is the system's manual pager.  Each page argument given to man is normally the name of a program, utility or function.  The manual page asso‐
              ciated with each of these arguments is then found and displayed.  A section, if provided, will direct man to look only in  that  section  of  the
              manual.The  default  action  is  to search in all of the available sections following a pre-defined order (see DEFAULTS), and to show only the
              first page found, even if page exists in several sections ( for more practical information of commands switches).                      
        c) info : it have both practical and theoritical info of commands switches.
- 8. ifconfig :  Ifconfig is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it
+ 9. ifconfig :  Ifconfig is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it
                is usually only needed when debugging or when system tuning is needed. If no arguments are given, ifconfig displays the status of the currently active interfaces.  If a single 
                interface argument is given, it displays the  status  of  the  given interface only; if a single -a argument is given, it displays the status of all interfaces, even those that 
                are down.       
