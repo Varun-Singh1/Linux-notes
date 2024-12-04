@@ -94,9 +94,9 @@ Technically shell is user interface of linux, when we have to control it, comman
         ls -a , --all : 
         ls -R :
         ls -t : 
- 6. cd(Change directory)  : home of that user and if that user dont have its home directory then it deny i dont have home,
-                    cd .  : shows the current directory.
-                    cd .. : one folder out from the location.     
+ 6. cd(Change directory)  : home of that user and if that user dont have its home directory then it deny i dont have home.  
+                    cd .  : shows the current directory.   
+                    cd .. : one folder out from the location.        
  8. Switches or Subcommands : 
              a) -h,--help,help : it will give summarised information theoritically of commmands switches.      
              b) man : man is the system's manual pager.  Each page argument given to man is normally the name of a program, utility or function.  The manual page asso‐
