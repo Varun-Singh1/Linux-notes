@@ -91,16 +91,16 @@ Technically shell is user interface of linux, when we have to control it, comman
         Mandatory arguments to long options are mandatory for short options too.
  5. cd(Change directory) :
  6. Switches or Subcommands : 
-    a) -h,--help,help : it will give summarised information theoritically of commmands switches.
-    b) man : man is the system's manual pager.  Each page argument given to man is normally the name of a program, utility or function.  The manual page asso‐
+       a) -h,--help,help : it will give summarised information theoritically of commmands switches.
+       b) man : man is the system's manual pager.  Each page argument given to man is normally the name of a program, utility or function.  The manual page asso‐
              ciated with each of these arguments is then found and displayed.  A section, if provided, will direct man to look only in  that  section  of  the
              manual.The  default  action  is  to search in all of the available sections following a pre-defined order (see DEFAULTS), and to show only the
-             first page found, even if page exists in several sections ( for more practical information of commands switches ).
-    c) info : it have both practical and theoritical info of commands switches.
- 7. ifconfig :  Ifconfig is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it
+             first page found, even if page exists in several sections ( for more practical information of commands switches).    
+       c) info : it have both practical and theoritical info of commands switches.
+ 8. ifconfig :  Ifconfig is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it
                is usually only needed when debugging or when system tuning is needed. If no arguments are given, ifconfig displays the status of the currently active interfaces.  If a single 
                interface argument is given, it displays the  status  of  the  given interface only; if a single -a argument is given, it displays the status of all interfaces, even those that 
-               are down.
-      ifconfig -a :  display all interfaces which are currently available, even if down
-      ifconfig -s :  display a short list (like netstat -i)
-      ifconfig -v :   be more verbose for some error conditions   
+               are down.       
+           ifconfig -a :  display all interfaces which are currently available, even if down
+           ifconfig -s :  display a short list (like netstat -i)
+           ifconfig -v :  be more verbose for some error conditions   
