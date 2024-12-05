@@ -119,11 +119,18 @@ Technically shell is user interface of linux, when we have to control it, comman
          [root@localhost Desktop]# touch f1.txt f2.txt f3 f4
          [root@localhost Desktop]# ls
          f1.txt  f2.txt  f3  f4
-       - and if we want to create a file by name which have space we can by naming it in double qoutes (" ") like this
-         [root@localhost Desktop]# touch "varin local"
-         [root@localhost Desktop]# ls
-         'varin local'
-12. file : describes the media type of file, example.
+       - and if we want to create a file by name which have space we can by naming it in double,single qoutes (" ") or can use backslash\ before the space like this,
+        double qoutes - [root@localhost Desktop]# touch "varin local"
+                        [root@localhost Desktop]# ls
+                        'varin local'
+        single qoutes - [root@localhost Desktop]# touch 'vc 2'
+                        [root@localhost Desktop]# ls
+                        'vc 2'
+         Backslash - [root@localhost Desktop]# touch vc\ 3
+                     [root@localhost Desktop]# ls
+                      'vc 3'
+11. file : describes the media type of file, example.
            [root@localhost Desktop]# file file.txt
            file.txt: empty
-13. cat : to read the files we use cat commands 
+
+12. cat : to read the files we use cat commands 
