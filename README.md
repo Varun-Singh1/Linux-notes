@@ -110,4 +110,20 @@ Technically shell is user interface of linux, when we have to control it, comman
                are down.       
            ifconfig -a :  display all interfaces which are currently available, even if down.   
            ifconfig -s :  display a short list (like netstat -i).     
-           ifconfig -v :  be more verbose for some error conditions.    
+           ifconfig -v :  be more verbose for some error conditions.
+10. touch : create an empty file at the present location, example.
+           [root@localhost Desktop]# touch file.txt
+           [root@localhost Desktop]# ls
+           file.txt
+       -  we can create mutiple files with by space between and there name like this,
+         [root@localhost Desktop]# touch f1.txt f2.txt f3 f4
+         [root@localhost Desktop]# ls
+         f1.txt  f2.txt  f3  f4
+       - and if we want to create a file by name which have space we can by naming it in double qoutes (" ") like this
+         [root@localhost Desktop]# touch "varin local"
+         [root@localhost Desktop]# ls
+         'varin local'
+12. file : describes the media type of file, example.
+           [root@localhost Desktop]# file file.txt
+           file.txt: empty
+13. cat : to read the files we use cat commands 
