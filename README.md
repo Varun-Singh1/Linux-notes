@@ -133,4 +133,24 @@ Technically shell is user interface of linux, when we have to control it, comman
            [root@localhost Desktop]# file file.txt
            file.txt: empty
 
-12. cat : to read the files we use cat commands 
+12. cat : to read the files we use cat commands and also to write content in the file like this,
+          [root@localhost Desktop]# cat d1
+          [root@localhost Desktop]# cat > d1
+          this is for test purpose.
+          ^C
+          [root@localhost Desktop]# cat d1
+          this is for test purpose.
+13. mkdir : to create a directory we use mkdir command, example.
+            [root@localhost Desktop]# mkdir dir1 dir2 dir3 dir4
+            [root@localhost Desktop]# ls
+            d1  d2  dir1  dir2  dir3  dir4
+            when we have to create directory which'll have sub directories or folder we can create it by using switch -p which look like this,
+           [root@localhost Desktop]# mkdir -p s1/s2/s3/s4
+           [root@localhost Desktop]# ls -R s1/
+           s1/:
+           s2
+           s1/s2:
+           s3
+           s1/s2/s3:
+           s4
+           s1/s2/s3/s4:
