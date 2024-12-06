@@ -94,24 +94,24 @@ Technically shell is user interface of linux, when we have to control it, comman
         ls -a , --all : 
         ls -R :
         ls -t : 
- 6. cd(Change directory)  : home of that user and if that user dont have its home directory then it deny i dont have home.  
+ 5. cd(Change directory)  : home of that user and if that user dont have its home directory then it deny i dont have home.  
                     cd .  : shows the current directory.   
                     cd .. : one folder out from the location.        
- 8. Switches or Subcommands : 
+ 6. Switches or Subcommands : 
              a) -h,--help,help : it will give summarised information theoritically of commmands switches.      
              b) man : man is the system's manual pager.  Each page argument given to man is normally the name of a program, utility or function.  The manual page asso‐
              ciated with each of these arguments is then found and displayed.  A section, if provided, will direct man to look only in  that  section  of  the
              manual.The  default  action  is  to search in all of the available sections following a pre-defined order (see DEFAULTS), and to show only the
              first page found, even if page exists in several sections ( for more practical information of commands switches).                      
        c) info : it have both practical and theoritical info of commands switches.
- 9. ifconfig :  Ifconfig is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it
+ 7. ifconfig :  Ifconfig is used to configure the kernel-resident network interfaces.  It is used at boot time to set up interfaces as necessary.  After that, it
                is usually only needed when debugging or when system tuning is needed. If no arguments are given, ifconfig displays the status of the currently active interfaces.  If a single 
                interface argument is given, it displays the  status  of  the  given interface only; if a single -a argument is given, it displays the status of all interfaces, even those that 
                are down.       
            ifconfig -a :  display all interfaces which are currently available, even if down.   
            ifconfig -s :  display a short list (like netstat -i).     
            ifconfig -v :  be more verbose for some error conditions.
-10. touch : create an empty file at the present location, example.
+  8. touch : create an empty file at the present location, example.
            [root@localhost Desktop]# touch file.txt
            [root@localhost Desktop]# ls
            file.txt
@@ -129,18 +129,18 @@ Technically shell is user interface of linux, when we have to control it, comman
          Backslash - [root@localhost Desktop]# touch vc\ 3
                      [root@localhost Desktop]# ls
                       'vc 3'
-11. file : describes the media type of file, example.
+9. file : describes the media type of file, example.
            [root@localhost Desktop]# file file.txt
            file.txt: empty
 
-12. cat : to read the files we use cat commands and also to write content in the file like this,
+10. cat : to read the files we use cat commands and also to write content in the file like this,
           [root@localhost Desktop]# cat d1
           [root@localhost Desktop]# cat > d1
           this is for test purpose.
           ^C
           [root@localhost Desktop]# cat d1
           this is for test purpose.
-13. mkdir : to create a directory we use mkdir command, example.
+11. mkdir : to create a directory we use mkdir command, example.
             [root@localhost Desktop]# mkdir dir1 dir2 dir3 dir4
             [root@localhost Desktop]# ls
             d1  d2  dir1  dir2  dir3  dir4
