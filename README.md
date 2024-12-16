@@ -147,10 +147,14 @@ Technically shell is user interface of linux, when we have to control it, comman
             when we have to create directory which'll have sub directories or folder we can create it by using switch -p which look like this,
            [root@localhost Desktop]# mkdir -p s1/s2/s3/s4
            [root@localhost Desktop]# ls -R s1/
-           s1/:
-           s2
+           s1/:s2
            s1/s2:
            s3
            s1/s2/s3:
            s4
            s1/s2/s3/s4:
+ 13. Wild card(*) :
+ 14. whoami :
+ 15. logout :
+ 16. Halt :   
+
