@@ -144,7 +144,7 @@ Technically shell is user interface of linux, when we have to control it, comman
             [root@localhost Desktop]# mkdir dir1 dir2 dir3 dir4
             [root@localhost Desktop]# ls
             d1  d2  dir1  dir2  dir3  dir4
-            when we have to create directory which'll have sub directories or folder we can create it by using switch -p which look like this,
+           when we have to create directory which'll have sub directories or folder we can create it by using switch -p which look like this,
            [root@localhost Desktop]# mkdir -p s1/s2/s3/s4
            [root@localhost Desktop]# ls -R s1/
            s1/:s2
@@ -153,8 +153,17 @@ Technically shell is user interface of linux, when we have to control it, comman
            s1/s2/s3:
            s4
            s1/s2/s3/s4:
- 13. Wild card(*) :
- 14. whoami :
- 15. logout :
- 16. Halt :   
+ 13. cp : copy something in desired location or Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+          cp -vr /etc/*.conf /root/Desktop/conf/:
+          cp -vr /var/log/* ~/Desktop/d4 :
+          cp -vr /var/log/ . : 
+ 14. mv : move means that we do cut paste of data its recommended bcuz at the time of copy data is at risk , thatswhy its better to use copy(cp) instead of mv. it is recursive by default.
+          mv anaconda-ks.cfg Documents/ :
+          if we cut paste or move it on same location then it'll be renamed like this :-
+          mv anaconda-ks.cfg anaconda-ks2.cfg :
+          cuz here in linux we don't have rename command we have but it doesn't works.
+ 16. Wild card(*) :
+ 17. whoami :
+ 18. logout :
+ 19. Halt :   
 
