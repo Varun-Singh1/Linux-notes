@@ -88,11 +88,8 @@ Key Features: Stability, community-driven, excellent documentation.
 Popular Derivatives:
 
 Ubuntu: User-friendly, widely adopted for desktops and servers.
-
 Linux Mint: Designed for simplicity and ease of use, especially for newcomers.
-
 Kali Linux: Tailored for penetration testing and ethical hacking.
-
 Raspberry Pi OS: Optimized for Raspberry Pi devices.
 
 2. Red Hat Family
@@ -105,9 +102,7 @@ Key Features: Enterprise-focused, stability, and robust support.
 Popular Derivatives:
 
 CentOS Stream: Community-supported, upstream development for RHEL.
-
 Fedora: Cutting-edge technology and innovations.
-
 AlmaLinux & Rocky Linux: Community-driven alternatives to CentOS.
 
 3. Arch Family
@@ -119,7 +114,6 @@ Key Features: Rolling release model, minimalistic, highly customizable.
 Popular Derivatives:
 
 Manjaro: User-friendly version of Arch with pre-configured tools.
-
 EndeavourOS: Keeps the Arch spirit alive while simplifying installation.
 
 # CentOS Installation
@@ -137,7 +131,6 @@ Contains essential user command binaries (executables) required for the system t
 2. /sbin (System Binaries)
 
 Contains essential system administration binaries.
-
 Commands are typically used by the system administrator (root).
 
 3. /etc (Configuration Files)
@@ -152,7 +145,6 @@ Contains user-specific directories where personal files, settings, and data are 
 5. /root (Root User's Home Directory)
 
 Home directory for the root user (superuser).
-
 Separate from /home for security reasons.
 
 6. /var (Variable Files)
@@ -170,7 +162,6 @@ Stores shared libraries required by binaries in /bin and /sbin.
 9. /tmp (Temporary Files)
 
 Used for temporary storage by applications and the system.
-
 Files here are usually cleared on system reboot.
 
 10. /dev (Device Files)
@@ -184,13 +175,11 @@ Virtual filesystem providing information about system processes and hardware.
 12. /sys (System Information)
 
 Similar to /proc, but specific to the kernel and hardware devices.
-
 Used for device management and debugging. 
 
 13. /opt (Optional Software)
 
 Contains optional, third-party software installed on the system.
-
 Common for proprietary software like Google Chrome.
 
 14. /boot (Boot Files)
@@ -200,7 +189,6 @@ Contains files required for booting the system.
 15. /mnt and /media (Mount Points)
 
 /mnt: Temporary mount points for filesystems.
-
 /media: Auto-mount points for removable media (e.g., USB drives, DVDs).
 
 16. /srv (Service Data)
@@ -288,8 +276,13 @@ Stores data for specific services, like web servers or file servers.
           if we cut paste or move it on same location then it'll be renamed like this :-
           mv anaconda-ks.cfg anaconda-ks2.cfg :
           cuz here in linux we don't have rename command we have but it doesn't works.
- 16. Wild card(*) :
- 17. whoami :
- 18. logout :
- 19. Halt :   
+ 16. Wild card(*) Globbing pattern : here we describe the pattern, and its apply where the pattern is match. its helpfull in both windows and linux even in programming languages its helpfull like in PHP, Python, Java, .Net, Some basic wildcarts are:
+       * it means any number or character. example ca* output be car,cat,ca,carpet,carll2
+       ? it means any single character. example hel? output be help,hell,helw.
+       [] it means Single character from range. example 1, file[0-2] output be file0,file1,file2. 2, [hd}ello output be include hello or dello
+      [!] it means Single character file not listed in brack. example file[!1] output be file0,file2
+      { } it means comma seprated terms. example {*.txt,*.pdf} output be where the extension is .txt and also of .pdf.
+ 18. whoami :
+ 19. logout :
+ 20. Halt :   
 
