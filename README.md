@@ -75,7 +75,8 @@ Technically shell is user interface of linux, when we have to control it, comman
 
 11) Free of Cost -> Most Linux distributions are free to download and use, reducing costs for personal users and organizations.
 
-# Linux distributions: this whole OS is based on unix system. some main distributions are:-
+# Linux distributions
+ this whole OS is based on unix system. some main distributions are:-
 1. Debian Family
 
 Base Distribution: Debian
