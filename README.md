@@ -75,11 +75,136 @@ Technically shell is user interface of linux, when we have to control it, comman
 
 11) Free of Cost -> Most Linux distributions are free to download and use, reducing costs for personal users and organizations.
 
-# Linux distributions
+# Linux distributions: this whole OS is based on unix system. some main distributions are:-
+1. Debian Family
+
+Base Distribution: Debian
+Package Manager: apt (Advanced Package Tool)
+File Format: .deb
+Key Features: Stability, community-driven, excellent documentation.
+
+
+Popular Derivatives:
+
+Ubuntu: User-friendly, widely adopted for desktops and servers.
+
+Linux Mint: Designed for simplicity and ease of use, especially for newcomers.
+
+Kali Linux: Tailored for penetration testing and ethical hacking.
+
+Raspberry Pi OS: Optimized for Raspberry Pi devices.
+
+2. Red Hat Family
+
+Base Distribution: Red Hat Enterprise Linux (RHEL)
+Package Manager: dnf (or yum)
+File Format: .rpm
+Key Features: Enterprise-focused, stability, and robust support.
+
+Popular Derivatives:
+
+CentOS Stream: Community-supported, upstream development for RHEL.
+
+Fedora: Cutting-edge technology and innovations.
+
+AlmaLinux & Rocky Linux: Community-driven alternatives to CentOS.
+
+3. Arch Family
+
+Base Distribution: Arch Linux
+Package Manager: pacman
+Key Features: Rolling release model, minimalistic, highly customizable.
+
+Popular Derivatives:
+
+Manjaro: User-friendly version of Arch with pre-configured tools.
+
+EndeavourOS: Keeps the Arch spirit alive while simplifying installation.
 
 # CentOS Installation
 
-# Directory structure of Linux
+# Directory structure of Linux 
+  
+ Root Directory (/)
+ The root directory is the topmost level in the hierarchy. All other directories and files reside under it.
+
+1. /bin (Binaries)
+
+Contains essential user command binaries (executables) required for the system to boot and operate in single-user mode.
+
+
+2. /sbin (System Binaries)
+
+Contains essential system administration binaries.
+
+Commands are typically used by the system administrator (root).
+
+3. /etc (Configuration Files)
+
+Stores system-wide configuration files.
+
+
+4. /home (Home Directories)
+
+Contains user-specific directories where personal files, settings, and data are stored.
+
+5. /root (Root User's Home Directory)
+
+Home directory for the root user (superuser).
+
+Separate from /home for security reasons.
+
+6. /var (Variable Files)
+
+Stores variable data that changes over time.
+
+7. /usr (User Programs)
+
+Contains user-related utilities and applications.
+
+8. /lib and /lib64 (Libraries)
+
+Stores shared libraries required by binaries in /bin and /sbin.
+
+9. /tmp (Temporary Files)
+
+Used for temporary storage by applications and the system.
+
+Files here are usually cleared on system reboot.
+
+10. /dev (Device Files)
+
+Contains device nodes that represent hardware devices (e.g., hard drives, USB drives, printers).
+
+11. /proc (Process Information)
+
+Virtual filesystem providing information about system processes and hardware.
+
+12. /sys (System Information)
+
+Similar to /proc, but specific to the kernel and hardware devices.
+
+Used for device management and debugging. 
+
+13. /opt (Optional Software)
+
+Contains optional, third-party software installed on the system.
+
+Common for proprietary software like Google Chrome.
+
+14. /boot (Boot Files)
+
+Contains files required for booting the system. 
+
+15. /mnt and /media (Mount Points)
+
+/mnt: Temporary mount points for filesystems.
+
+/media: Auto-mount points for removable media (e.g., USB drives, DVDs).
+
+16. /srv (Service Data)
+
+Stores data for specific services, like web servers or file servers.
 
 # Remote shell 
 
