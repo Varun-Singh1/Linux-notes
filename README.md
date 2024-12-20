@@ -297,4 +297,8 @@ like in PHP, Python, Java, .Net, Some basic wildcarts are:
  16. whoami :
  17. logout :
  18. Halt :   
+ String commands
+ 19. grep
+ 20. awk
+ 21. sed
 
