@@ -267,18 +267,7 @@ Stores data for specific services, like web servers or file servers.
            s1/s2/s3:
            s4
            s1/s2/s3/s4:
- 12. cp : copy the file or directory in desired location, it can have source multiple but can have only one destination whatever is in last can only be the destination, Copy SOURCE to DE        or multiple SOURCE(s) to DIRECTORY. its subcommand contain  -v, --verbose used for explain what is being done.  -R, -r, --recursive for copy directories recursively means its subdirectories 
-also.
-          cp -vr /etc/*.conf /root/Desktop/conf/:
-          cp -vr /var/log/* ~/Desktop/d4 :
-          cp -vr /var/log/ . : 
- 13. mv : move means that we do cut paste of data its recommended bcuz at the time of copy data is at risk , thatswhy its better to use copy(cp) instead of mv. it is recursive by default.
-          mv anaconda-ks.cfg Documents/ :
-          if we cut paste or move it on same location then it'll be renamed like this :-
-          mv anaconda-ks.cfg anaconda-ks2.cfg :
-          cuz here in linux we don't have rename command we have but it doesn't works.
- 14. Wild card(*) Globbing pattern : here we describe the pattern, and its apply where the pattern is match. its helpfull in both windows and linux even in programming languages its helpfull 
-like in PHP, Python, Java, .Net, Some basic wildcarts are:
+ 12. . Wild card(*) Globbing pattern : here we describe the pattern, and its apply where the pattern is match. its helpfull in both windows and linux even in programming languages its helpfull like in PHP, Python, Java, .Net, Some basic wildcarts are:
        * it means any number or character. example ca* output be car,cat,ca,carpet,carll2
              eg.  rm -fv ma*
        ? it means any single character. example hel? output be help,hell,helw.
@@ -289,16 +278,37 @@ like in PHP, Python, Java, .Net, Some basic wildcarts are:
              eg.  rm -fv messages[!1]
       { } its a list  of pattern with comma seprated terms. example {*.txt,*.pdf} output is where the extension .txt and .pdf.
              eg.   rm -vf {*.log,cron*,messages?}
- 15. rm : to delete the directory or content of some files.
+ 13. rm : to delete the directory or content of some files.
     (for content) [root@localhost d4]# rm -fv ma*
         removed 'maillog'
         removed 'maillog-20241201'
-        removed 'maillog-20241210' 
- 16. whoami :
- 17. logout :
- 18. Halt :   
- String commands
- 19. grep
- 20. awk
- 21. sed
+        removed 'maillog-20241210'
+ 14. cp : copy the file or directory in desired location, it can have source multiple but can have only one destination whatever is in last can only be the destination, Copy SOURCE to DE               or multiple SOURCE(s) to DIRECTORY. its subcommand contain  -v, --verbose used for explain what is being done.  -R, -r, --recursive for copy directories recursively means its 
+          subdirectories also.
+          cp -vr /etc/*.conf /root/Desktop/conf/:
+          cp -vr /var/log/* ~/Desktop/d4 :
+          cp -vr /var/log/ . :
+      ! Example of multiple source to single destination are below
+          cp -v /etc/passwd /etc/shadow /etc/gshadow /etc/group /var/log/messages /var/log/anaconda/anaconda.log /root/Desktop/d2
+          '/etc/passwd' -> '/root/Desktop/d2/passwd'
+          '/etc/shadow' -> '/root/Desktop/d2/shadow'
+          '/etc/gshadow' -> '/root/Desktop/d2/gshadow'
+          '/etc/group' -> '/root/Desktop/d2/group'
+          '/var/log/messages' -> '/root/Desktop/d2/messages'
+          '/var/log/anaconda/anaconda.log' -> '/root/Desktop/d2/anaconda.log'
+       We can also made a file after copy and rename it :
+          cp -v /var/log/messages /root/Desktop/d3/messages2
+          '/var/log/messages' -> '/root/Desktop/d3/messages2'
+ 16. mv : move means that we do cut paste of data its recommended bcuz at the time of copy data is at risk , thatswhy its better to use copy(cp) instead of mv. it is recursive by default.
+          mv anaconda-ks.cfg Documents/ :
+          if we cut paste or move it on same location then it'll be renamed like this :-
+          mv anaconda-ks.cfg anaconda-ks2.cfg :
+          cuz here in linux we don't have rename command we have but it doesn't works. 
+ 17. whoami :
+ 18. logout :
+ 19. Halt :   
+# String commands
+ 20. grep :
+ 21. awk :
+ 22. sed :
 
