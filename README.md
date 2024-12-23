@@ -285,9 +285,9 @@ Stores data for specific services, like web servers or file servers.
         removed 'maillog-20241210'
  14. cp : copy the file or directory in desired location, it can have source multiple but can have only one destination whatever is in last can only be the destination, Copy SOURCE to DE               or multiple SOURCE(s) to DIRECTORY. its subcommand contain  -v, --verbose used for explain what is being done.  -R, -r, --recursive for copy directories recursively means its 
           subdirectories also.
-          cp -vr /etc/*.conf /root/Desktop/conf/:
-          cp -vr /var/log/* ~/Desktop/d4 :
-          cp -vr /var/log/ . :
+          cp -vr /etc/*.conf /root/Desktop/conf/: wildcard for *.conf files.
+          cp -vr /var/log/* ~/Desktop/d4 : from home of root then Desktop/d4.
+          cp -vr /var/log/ . : here . means at current location.
       ! Example of multiple source to single destination are below
           cp -v /etc/passwd /etc/shadow /etc/gshadow /etc/group /var/log/messages /var/log/anaconda/anaconda.log /root/Desktop/d2
           '/etc/passwd' -> '/root/Desktop/d2/passwd'
@@ -299,14 +299,20 @@ Stores data for specific services, like web servers or file servers.
        We can also made a file after copy and rename it :
           cp -v /var/log/messages /root/Desktop/d3/messages2
           '/var/log/messages' -> '/root/Desktop/d3/messages2'
- 16. mv : move means that we do cut paste of data its recommended bcuz at the time of copy data is at risk , thatswhy its better to use copy(cp) instead of mv. it is recursive by default.
+ 16. mv : Move coomand means that we do cut paste of data, its not recommended bcuz at the time of copy, data is at risk , thatswhy its better to use copy(cp) instead of mv. it is recursive             by default.
           mv anaconda-ks.cfg Documents/ :
           if we cut paste or move it on same location then it'll be renamed like this :-
           mv anaconda-ks.cfg anaconda-ks2.cfg :
-          cuz here in linux we don't have rename command we have but it doesn't works. 
- 17. whoami :
- 18. logout :
- 19. Halt :   
+          cuz here in linux we don't have rename command, we have but it doesn't works.
+          pattern of command:-  mv -v messages cron* firewalld lastlog anconda/ se* b* ../../d1/
+ 17. ln : link commmand means for creating a shortcut for an long location we dont have to go for that all location, like we have to use var/log/messages many times so use this whole location           in command but we want its shortcut on Desktop or at Current location. links are of two types Hard link and Soft link.
+          (Hardlink)   ln /var/log/messages my_hard_link
+          then we`ll have my_hard_link name file at current location which have same content as of var/log/messages, this link will always there either actual file is there or not,this is               called hard link it needs exact space at actual disk which actual file needs. to understand its full clone, lets check it after restarting the pc cuz after restarting this file                updates and if we delete actual file rm -f /var/log/messages even thou its link remains, after rstarting we can see that log messages file again made but have limited lines and its            link have all old content plus this new content also, here we said OS to write all contents of var/log/messages to my_hard_link this called hard link.
+          (Softlink) ln -s var/log/messages my_soft_link
+          this actual link as we call my_soft_link even also then var/log/messages is called, it have size very less then an actual one, here problem is that if actual file misplaced then the           link breaks down,
+ 19. whoami :
+ 20. logout :
+ 21. Halt :   
 # String commands
  20. grep :
  21. awk :
