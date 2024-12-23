@@ -1,4 +1,4 @@
-# Linux notes
+8# Linux notes
 
 Its older version is UNIX, similar to how Windows' early version was DOS. Its development dates back to the 1960s and 1970s. 
 
@@ -314,7 +314,8 @@ Stores data for specific services, like web servers or file servers.
  20. logout :
  21. Halt :   
 # String commands
- 20. grep :
+ 20. grep : when we want particular line of   some word from any command output, it filters  sting rowvise.
+ grep root /etc/passwd (here it will shows that rows only which have root in etc/passwd file.
  21. awk :
  22. sed :
 
