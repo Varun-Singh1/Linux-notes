@@ -201,7 +201,7 @@ Stores data for specific services, like web servers or file servers.
  1. hostname :  Hostname is used to display the system's DNS name, and to display or set its hostname or NIS domain name.
  2. pwd(present working directorie) : Print the full filename of the current working directory.
  3. id : Print user and group information for each specified USER, or (when USER omitted) for the current user.
- 4. ls : List information about the FILEs (the current directory by default).Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+ 4. ls : List information about the directory (the current directory by default).Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
         Mandatory arguments to long options are mandatory for short options too.
         ls -l :
         ls -h , --human-readable : 
