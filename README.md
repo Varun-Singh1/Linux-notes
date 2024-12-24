@@ -1,4 +1,4 @@
-8# Linux notes
+# Linux notes
 
 Its older version is UNIX, similar to how Windows' early version was DOS. Its development dates back to the 1960s and 1970s. 
 
@@ -318,4 +318,5 @@ Stores data for specific services, like web servers or file servers.
  grep root /etc/passwd (here it will shows that rows only which have root in etc/passwd file.
  21. awk :
  22. sed :
-
+# file finding command
+ 23. find : find (
