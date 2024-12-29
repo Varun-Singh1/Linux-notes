@@ -408,17 +408,54 @@ Shell is the outer layer of any surface, linux's user interface is called shell.
              command! cat .bash_history
                 and if we deleted that files then its deleted, after restarting or shutdown the pc started then again this file created and gonna stores histroy cuz thats its work to.
                 but if we want never to maintain our history here, then we have /dev/null where we can put any content but its not goes there, so that we cant see any of its content, so we can create its link in                      /dev/null
-            command! ln -s /dev/null .bash_history
-36. /dev/null : location where the content cant go, its an blackhole of linux means if we want to dump any content or permanently delete any file, so we can redirect here.
+             command! ln -s /dev/null .bash_history
+             After history command, by using exclamation mark and the no. of that command then that command will run, Also if we want to run anyone command from few last commands where we remember that command is                start from some rm sort of, so we can use ! and rm then any command from last that starts from rm will run, like this.
+             command! !763
+             command! !rm
+             also we can filter history command
+             command! histroy 8
+             then only last 8 commands will appear 
+35. /dev/null : location where the content cant go, its an blackhole of linux means if we want to dump any content or permanently delete any file, so we can redirect here.
                 command! cat /dev/null
                 command! cat > /dev/null
                 to write any content for checking,
                 command! cat /dev/null
-                to see the content we wrote, 
-38.  echo : it prints the value and also variable but we have to gave variable in capital letters,
-             command!
-39. wc   : use this for print the wordcount, lines in any particular file or at location,
- String commands
+                to see the content we wrote,
+36. echo : it prints the value and also variable but we have to gave variable in capital letters,
+             command! echo 
+37. uptime : it will shows the uptime of cpu from last proper shutdown,
+             command! uptime
+38. exit : to end the ssh session,
+           command! exit
+39. logout : another way to end the session,
+             command! logout
+40. shutdown : to shutdown the pc, it will immediatelly not but takes time to shutdown.
+                command! shutdown -P
+                it will poweroff the pc nd shows time of 1min to let you stop the work performing,
+                command! shutdown -P now
+                do poweroff just now,
+                command! shutdown -h
+                h stands for halts means to do immediatelly asap shutdown, 
+                command! shutdown -h now
+                it do shutdown now,
+                command! shutdown -c
+                if we want to cancel schedule shutdown then this command will do that,
+                command! shutdown -r
+                here r means to do restart with showing some time to let you stop the performing work,
+                command! shutdown -r now
+                restart now the connection or pc,
+41. halt : it do poweroff immediatelly.
+42. poweroff : here it do poweroff by sequencewise.
+43. reboot : restart the pc.
+44. init 0 : means to poweroff.
+45. init 6 : means to restart.
+      # pipes and redirect
+    To run multiple coomands in one command we can use ; or && in between different commands like this,
+    command#  id ; ls ; date ; ip a ; pwd
+    command#  id && ls && date && ip a && pwd
+    # 2.10sec
+    
+       # String commands
  . grep : when we want particular line of   some word from any command output, it filters  sting rowvise.
  grep root /etc/passwd (here it will shows that rows only which have root in etc/passwd file.
  . awk :
