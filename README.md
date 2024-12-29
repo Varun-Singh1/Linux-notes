@@ -403,11 +403,21 @@ Shell is the outer layer of any surface, linux's user interface is called shell.
           command! ip a
 33. route -n : it will show our gateway along with interface name,
           command! route -n  
-34. history : it will shows the history of all commands which we used till now, when we restart or shutdown the pc then the last commands we used that commands will now save in history files location which is                    different for all shells like for bash its at .bash_history etc.
+34. history : it will shows the history of all commands which we used till now, when we restart or shutdown the pc then the last commands we used that commands will now save in history files, their location which                 is different for all shells like for bash its at .bash_history etc.
              command! history
-35. echo : it prints the value and also variable but we have to gave variable in capital letters,
+             command! cat .bash_history
+                and if we deleted that files then its deleted, after restarting or shutdown the pc started then again this file created and gonna stores histroy cuz thats its work to.
+                but if we want never to maintain our history here, then we have /dev/null where we can put any content but its not goes there, so that we cant see any of its content, so we can create its link in                      /dev/null
+            command! ln -s /dev/null .bash_history
+36. /dev/null : location where the content cant go, its an blackhole of linux means if we want to dump any content or permanently delete any file, so we can redirect here.
+                command! cat /dev/null
+                command! cat > /dev/null
+                to write any content for checking,
+                command! cat /dev/null
+                to see the content we wrote, 
+38.  echo : it prints the value and also variable but we have to gave variable in capital letters,
              command!
-   # (20:57) bscm4
+39. wc   : use this for print the wordcount, lines in any particular file or at location,
  String commands
  . grep : when we want particular line of   some word from any command output, it filters  sting rowvise.
  grep root /etc/passwd (here it will shows that rows only which have root in etc/passwd file.
