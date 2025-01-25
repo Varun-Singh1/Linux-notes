@@ -449,7 +449,7 @@ Shell is the outer layer of any surface, linux's user interface is called shell.
 43. reboot : restart the pc.
 44. init 0 : means to poweroff.
 45. init 6 : means to restart.
-      # pipes and redirect
+ # pipes and redirect
     To run multiple coomands in one command we can use ; or && in between different commands like this,
     command#  id ; ls ; date ; ip a ; pwd
     command#  id && ls && date && ip a && pwd
@@ -459,12 +459,12 @@ Shell is the outer layer of any surface, linux's user interface is called shell.
  1. Command-line text editors
 Vi/Vim
 
-Features:
+• Features:
 
 Modes: insert, Command, Visual.
 Lightweight, available on almost all Linux systems.
 syntax heighlighting and plugin support (Vim).
-Basic Commands:
+• Basic Commands:
 
 Insert mode: Press i.
 Save: :w.
@@ -473,31 +473,34 @@ Force exit without saving: :q! .
 exit with saving: :wq!.
 nano
 
-Features:
+• Features:
 
 User-friendly and Simmple.
 Display of shortcuts at the bottom.
-Basic Commands:
+• Basic Commands:
 
 Ctrl+O: Save file.
 Ctrl+X: Exit editor.
 Ctrl+k: Cut text.
 Ctrl+U: Paste text.
-Cat
+
+• Cat
 
 cat is also use as a text editor but it is not use for big files.
 
 this is basically use to read the the content.
 
 # Compression Tools
-bzip2 : bzip2 messages (file name)
-gzip : gzip messages1
-zip : zip messages2.zip messages2 (create new file)
-7za : 7za a messages3.7z messages3 (compress more compare others) (create new file) 7za e messages3.7z
-tar : tar -cvf messages4.tar messages4 tar -xvf messages4.tar tar -czvf messages5.tgz messages5 tar -cjvf messages6.tbz messages6
-String Processing
+•bzip2 : bzip2 messages (file name)
+•gzip : gzip messages1
+•zip : zip messages2.zip messages2 (create new file)
+•7za : 7za a messages3.7z messages3 (compress more compare others) (create new file) 7za e messages3.7z
+•tar : tar -cvf messages4.tar messages4 tar -xvf messages4.tar tar -czvf messages5.tgz messages5 tar -cjvf messages6.tbz messages6
+
+# String Processing
+
 Sort : The sort command is used to arrange the lines of a text file or input in a specified order, either alphabetically or numerically, ascending or descending.
-Common Options:
+• Common Options:
 
 -n : Sort numerically (default is lexicographically).
 
@@ -528,25 +531,25 @@ A user account in linux is a record that allows an individual or process to log 
 
 # Key components of a User Account
 
-Username: A unique identifier for the user on the system (e.g., sachin, admin).
+• Username: A unique identifier for the user on the system (e.g., sachin, admin).
 
-User ID (UID): A unique numerical ID assigned to each user. for example:
+• User ID (UID): A unique numerical ID assigned to each user. for example:
 
  - 0 is reserved for the root user.
  - UIDs above a certain range are for regular users.
-Group ID (GID): Specifies the primary group the user belongs to. groups help manage permissions collectively.
+• Group ID (GID): Specifies the primary group the user belongs to. groups help manage permissions collectively.
 
-Home Directory: A personal directory for the user to store files and configuration settings (e.g., /home/username).
+• Home Directory: A personal directory for the user to store files and configuration settings (e.g., /home/username).
 
-Shell: The default command-line interpreter for the user (e.g., /bin/bash).
+•Shell: The default command-line interpreter for the user (e.g., /bin/bash).
 
-Password: Stored (usually in an encrypted format) to authenticate the user. It's often managed in /etc/shadow.
+• Password: Stored (usually in an encrypted format) to authenticate the user. It's often managed in /etc/shadow.
 
-System Files:
+# System Files:
 
       /etc/passwd: Contains user account information (excluding passwords).
       /etc/shadow: Stores encrypted password data.
-Types of User Accounts
+# Types of User Accounts
 
 System Accounts: Used by system services and processes (e.g., root, daemon).
 
@@ -608,7 +611,7 @@ Passwd File
   5. root        -   comment about this user.
   6. /root       -   /root is the home directory for this user.
   7. /bin/bash   -   And finally /bin/bash is the shell for this user.
-Shadow File
+# Shadow File
 
 • cat /etc/shadow
       [User]  :[Encrypted Password]  :[Last pass change]  :[Min pass age]  :[Max pass age]   :[Warning period] :[Inact period]  :[Exp date] :[Unused]
@@ -619,7 +622,8 @@ Shadow File
       armour  :$6$wf/dsYGa7aWhThyi$Y :                    :0               :99999            :7                :                :           :
 root - Username.
 
-# Encrypted Passsword Encrypted Password - The password is using the $type$salt$shashed format. $typw is the method cryptographic hash algorithm and can have the follwign values: $1$ - Unix MD5
+ # Encrypted Passsword 
+Encrypted Password - The password is using the $type$salt$shashed format. $typw is the method cryptographic hash algorithm and can have the follwign values: $1$ - Unix MD5
 $2a$ - Blowfish $2y$ - EKsblowfish $5$ - SHA-256 $6$ - SHA-512
 
 17110 - Last password change
