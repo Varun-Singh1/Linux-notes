@@ -453,12 +453,212 @@ Shell is the outer layer of any surface, linux's user interface is called shell.
     To run multiple coomands in one command we can use ; or && in between different commands like this,
     command#  id ; ls ; date ; ip a ; pwd
     command#  id && ls && date && ip a && pwd
-    # 2.10sec
     
-       # String commands
- . grep : when we want particular line of   some word from any command output, it filters  sting rowvise.
- grep root /etc/passwd (here it will shows that rows only which have root in etc/passwd file.
- . awk :
- . sed :
-# file finding command
- . find : find (
+# Text Editor
+• Linux offers various text editors for   editing connfiguration files, writing code, or managing text files.
+ 1. Command-line text editors
+Vi/Vim
+
+Features:
+
+Modes: insert, Command, Visual.
+Lightweight, available on almost all Linux systems.
+syntax heighlighting and plugin support (Vim).
+Basic Commands:
+
+Insert mode: Press i.
+Save: :w.
+Exit: :q.
+Force exit without saving: :q! .
+exit with saving: :wq!.
+nano
+
+Features:
+
+User-friendly and Simmple.
+Display of shortcuts at the bottom.
+Basic Commands:
+
+Ctrl+O: Save file.
+Ctrl+X: Exit editor.
+Ctrl+k: Cut text.
+Ctrl+U: Paste text.
+Cat
+
+cat is also use as a text editor but it is not use for big files.
+
+this is basically use to read the the content.
+
+# Compression Tools
+bzip2 : bzip2 messages (file name)
+gzip : gzip messages1
+zip : zip messages2.zip messages2 (create new file)
+7za : 7za a messages3.7z messages3 (compress more compare others) (create new file) 7za e messages3.7z
+tar : tar -cvf messages4.tar messages4 tar -xvf messages4.tar tar -czvf messages5.tgz messages5 tar -cjvf messages6.tbz messages6
+String Processing
+Sort : The sort command is used to arrange the lines of a text file or input in a specified order, either alphabetically or numerically, ascending or descending.
+Common Options:
+
+-n : Sort numerically (default is lexicographically).
+
+-r : Reverse the sort order (descending).
+
+-k : Sort based on a specific field or column.
+
+-u : Eliminate duplicate lines.
+
+-t : Specify a delimiter (default is whitespace).
+
+-f : Ignore case (case-insensitive sorting).
+
+-b : Ignore leading blanks.
+
+-M : Sort by month names (e.g., "Jan", "Feb", "Mar").
+
+-o : Write the sorted output to a file.
+
+head :
+tail :
+wc (word count) :
+cut :
+paste :
+grep :
+# User Group Management
+A user account in linux is a record that allows an individual or process to log in and access the system with specific permissions and privileges. It erves as an identitiy for users to interact with the system, ensuring security and accountability.
+
+# Key components of a User Account
+
+Username: A unique identifier for the user on the system (e.g., sachin, admin).
+
+User ID (UID): A unique numerical ID assigned to each user. for example:
+
+ - 0 is reserved for the root user.
+ - UIDs above a certain range are for regular users.
+Group ID (GID): Specifies the primary group the user belongs to. groups help manage permissions collectively.
+
+Home Directory: A personal directory for the user to store files and configuration settings (e.g., /home/username).
+
+Shell: The default command-line interpreter for the user (e.g., /bin/bash).
+
+Password: Stored (usually in an encrypted format) to authenticate the user. It's often managed in /etc/shadow.
+
+System Files:
+
+      /etc/passwd: Contains user account information (excluding passwords).
+      /etc/shadow: Stores encrypted password data.
+Types of User Accounts
+
+System Accounts: Used by system services and processes (e.g., root, daemon).
+
+Regular User Accounts: Created for individuals to log in and perform tsaks.
+
+Service Accounts: Dedicated accounts for applications or services to run with specific permissions.
+
+# Importance of User Accounts
+
+Security: ensures that only authorised individuals or processes access resources.
+
+Acccountability: Tracks user actions and access logs.
+
+Customization: Allows personalised settings for each user.
+
+In Linux, managing user accounts involves creating, modifying, and deleting them using commands like useradd, usermod, and userdel, or by directlyediting configuration files with administrative privileges.
+
+# Key Features of a Group
+
+Group Name: A Unique identifier for the group (e.g., developers, admin).
+
+Group ID (GID): A Unique numerical identifier assigned to each group.
+
+Group Members: A list of users who belong to the group. A user can beloong to multiple groups.
+
+Primary Group: Each user is assigned a primary group when their account is created. Files created by the user are associated with this grouups.
+
+# Types of Groups
+
+1. System Groups: Used by system services and processes (e.g., adm,daemon).
+
+2. User Groups: Created for users to belong tp specific roles or teams (e.g., dev,marketing).
+
+# Benefits of Using Groups
+
+•Access Control: Allows collective permisssion management for files, directories and resources.
+
+•Simplified Administration: Reduces the complexity of managing permissions for multiple users.
+
+•Collaboration: Faciltates teamwork by providing shared access to resources.
+
+    # cat /etc/login.defs
+    # grep -v "^#" /etc/login.defs | grep -v "^$"
+# System Files Linux
+Passwd File
+
+• cat /etc/passwd
+    [User]    :[x]   :[UID]   :[Comment]                :[Home directory]          :[Default shell]
+     root      :x     :0       :root                     :/root                     :/bin/bash
+     daemon    :x     :2       :daemon                   :/sbin                     :/sbin/nologin
+     sshd      :x     :74      :privilege-sperated SSD   :/usr/share/empty.sshd     :/usr/sbin/nologin
+     apache    :x     :48      :apache                   :/usr/share/httpd          :sbin/nologin
+     armour    :x     :1000    :Armour Infosec           :/home/armour              :/bin/bash
+  
+  1. root        -   The first root is the username.
+  2. x           -   Indicates that the account is protected by a shadowed password
+  3. 0           -   0 is the suer ID for this user.
+  4. 0           -   0 is the group ID for this user.
+  5. root        -   comment about this user.
+  6. /root       -   /root is the home directory for this user.
+  7. /bin/bash   -   And finally /bin/bash is the shell for this user.
+Shadow File
+
+• cat /etc/shadow
+      [User]  :[Encrypted Password]  :[Last pass change]  :[Min pass age]  :[Max pass age]   :[Warning period] :[Inact period]  :[Exp date] :[Unused]
+      root    :$6$ot1LMMm5ih8sJUM4$Q :                    :0               :99999            :7                :                :           : 
+      daemon  :*                     :19760               :0               :99999            :7                :                :           :
+      sshd    :!!                    : 20034              :                :                 :                 :                :           :
+      apache  :!!                    :20063               :                :                 :                 :                :           :
+      armour  :$6$wf/dsYGa7aWhThyi$Y :                    :0               :99999            :7                :                :           :
+root - Username.
+
+# Encrypted Passsword Encrypted Password - The password is using the $type$salt$shashed format. $typw is the method cryptographic hash algorithm and can have the follwign values: $1$ - Unix MD5
+$2a$ - Blowfish $2y$ - EKsblowfish $5$ - SHA-256 $6$ - SHA-512
+
+17110 - Last password change
+
+0 - Minimum password age
+
+99999 - Maximum password age
+
+7 - Warning period
+
+...... - Inactivity period
+
+...... - Expiration date
+
+...... - Unused
+
+# Group File
+
+• cat /etc/group
+     [group]      :[x]    :[GID]     :[Comma-seperated list of username]              
+     root         :x      :0         :                   
+     daemon       :x      :2         :                   
+     sshd         :x      :74        :  
+     apache       :x      :48        :                  
+     armour       :x      :1000      :armour    
+root - The firstpart is the name of the group
+x - x is a placeholder for password.
+0 - The group ID / gid
+armour - The lat part is a comma-seperated list of username that belong to that group.
+Gshadow File
+
+• cat /etc/gshadow
+   [group]        :[Encrypted password]    :[group administrators names]     :[group members names]              
+     root         :                        :                                 :                   
+     daemon       :                        :                                 :                   
+     sshd         :!                       :                                 :  
+     apache       :!                       :                                 :                  
+     armour       :!                       :                                 :   
+root - Group Name
+!! - Contains the encrypted group password of the text password which was specified using gpasswd command. if the file /etc/gshadow is deleted, then this encryped password is moved to second field of /etc/group. if no passworf is given to group, then a '!' is displayed in the file.
+contains list of the group administrators names. By default it is blank i.e. only user having same name as,group name is first group adminstrator.
+armour - contains list of group members names. Blank by default.
