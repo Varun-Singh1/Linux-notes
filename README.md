@@ -1,10 +1,10 @@
-Linux Notes
+## Linux Notes
 
-Introduction
+# Introduction
 
 Linux evolved from UNIX, just as Windows originated from DOS. UNIX was developed in the 1960s and 70s at AT&T Bell Labs by Ken Thompson, Dennis Ritchie, and others. It was designed as a portable, multi-tasking, and multi-user system.
 
-UNIX
+# UNIX
 
 Proprietary source code, with notable variants like BSD (Berkeley Software Distribution) and commercial versions such as AIX, HP-UX, and Solaris.
 
@@ -12,7 +12,7 @@ Historically dominant in academic, enterprise, and server environments.
 
 Popular variants include IBM AIX, HP-UX, and Oracle Solaris.
 
-LINUX
+# LINUX
 
 Created by Linus Torvalds in 1991, inspired by UNIX but developed independently.
 
@@ -24,11 +24,11 @@ Widely used in servers, desktops, embedded systems, and supercomputers.
 
 Popular distributions: Ubuntu, Fedora, CentOS, Debian, Red Hat Enterprise Linux (RHEL).
 
-What is an Operating System?
+# What is an Operating System?
 
 An operating system is a collection of programs that enables communication between hardware and software.
 
-Structure Comparison
+# Structure Comparison
 
 Windows: User → Application → OS → Hardware
 
@@ -36,7 +36,7 @@ Linux: User → Shell → Kernel → Hardware
 
 Shell is the user interface of Linux, allowing users to interact with the system. The term originates from a water shell 🐚 that protects the pearl inside.
 
-Functions of an Operating System
+# Functions of an Operating System
 
 Process Management – Handles program execution.
 
@@ -56,7 +56,7 @@ System Performance Monitoring – Tracks and optimizes performance.
 
 Utilities & Support Services – Includes tools for administration and maintenance.
 
-Features of Linux
+# Features of Linux
 
 ✅ Open Source – Freely accessible and modifiable.
 ✅ Multitasking – Handles multiple tasks efficiently.
@@ -70,7 +70,7 @@ Features of Linux
 ✅ Community Support – Large, active user and developer base.
 ✅ Free of Cost – Most Linux distributions are free to use.
 
-Linux Distributions
+## Linux Distributions
 
 1. Debian Family
 
@@ -80,7 +80,7 @@ Package Manager: apt
 
 File Format: .deb
 
-Key Features: Stability, community-driven, extensive documentation.
+! Key Features: Stability, community-driven, extensive documentation.
 
 🔹 Popular Derivatives:
 
@@ -100,7 +100,7 @@ Package Manager: dnf / yum
 
 File Format: .rpm
 
-Key Features: Enterprise-focused, stable, and well-supported.
+! Key Features: Enterprise-focused, stable, and well-supported.
 
 🔹 Popular Derivatives:
 
@@ -116,7 +116,7 @@ Base: Arch Linux
 
 Package Manager: pacman
 
-Key Features: Rolling release, minimalistic, highly customizable.
+! Key Features: Rolling release, minimalistic, highly customizable.
 
 🔹 Popular Derivatives:
 
@@ -124,11 +124,11 @@ Manjaro – User-friendly Arch with pre-configured tools.
 
 EndeavourOS – Simplified Arch experience.
 
-Directory Structure of Linux
+# Directory Structure of Linux
 
 Linux follows a hierarchical file system. The root directory (/) is the starting point, with subdirectories containing different types of data.
 
-📂 Essential Directories:
+! 📂 Essential Directories:
 
 /bin – Essential user command binaries.
 
@@ -162,7 +162,7 @@ Linux follows a hierarchical file system. The root directory (/) is the starting
 
 /srv – Data for services like web servers.
 
-Remote Shell in Linux
+# Remote Shell in Linux
 
 The shell is the outer interface that allows users to interact with the system. Different Linux shells store command history in separate files. For example, Bash shell history is stored in .bash_history.
 
