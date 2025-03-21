@@ -202,3 +202,107 @@ The shell is the outer interface that allows users to interact with the system. 
       ~Runs Everywhere: From web servers to smartphones to IoT devices.
       ~Community Support: Millions of developers contribute to it.
 
+# Linux Basic Commands Cheat Sheet
+
+# 🔹 System Information Commands
+
+1. hostname - Displays the system's DNS name and allows setting hostname or NIS domain name.
+
+   hostname -a → Shows all hostnames.
+
+   hostname -i → Displays IPv6 address.
+
+   hostname -I → Displays IPv4 address.
+
+2. id - Prints user and group information of the current user.
+
+3. pwd (Present Working Directory) - Prints the full path of the current directory.
+
+# 📂 File & Directory Management
+
+4. ls - Lists directory contents.
+
+    ls -l → Long format listing.
+
+    ls -h → Human-readable sizes.
+
+    ls -a → Shows hidden files.
+
+    ls -R → Lists directories recursively.
+
+    ls -t → Sorts files by modification time.
+
+5. cd (Change Directory)
+
+    cd . → Stay in the same directory.
+
+    cd .. → Move one level up.
+
+    cd /path/to/directory → Navigate to a specific directory.
+
+6. mkdir - Creates directories.
+
+    mkdir dir1 dir2 → Creates multiple directories.
+
+    mkdir -p parent/child/grandchild → Creates nested directories.
+
+7. rm - Removes files or directories.
+
+    rm -f filename → Force delete a file.
+
+    rm -r directory → Recursively delete a directory.
+
+8. cp - Copies files and directories.
+
+    cp file1 file2 destination/ → Copies multiple files to a directory.
+
+    cp -r dir1 dir2 → Copies a directory recursively.
+
+9. mv - Moves or renames files.
+
+    mv oldname newname → Renames a file.
+
+    mv file /destination/ → Moves a file to another directory.
+  
+10. touch - Creates an empty file.
+
+    touch filename.txt → Creates a new file.
+
+    touch "file name with space" → Creates a file with spaces in its name.
+
+11. file - Determines the file type.
+
+    file filename.txt → Describes file type.
+
+12. cat - Reads, writes, or concatenates files.
+
+    cat filename → Displays file content.
+
+    cat > filename → Creates a file and allows typing content.
+
+    cat /etc/os-release - Shows OS details.
+
+    cat /etc/resolv.conf - Displays DNS configurations.
+
+# 🌍 Network Configuration
+
+13. ifconfig - Displays network interfaces (deprecated, use ip a).
+
+    ifconfig -a → Shows all interfaces (even down ones).
+
+    ifconfig -s → Displays a summary of interfaces.
+
+14. ip a - Shows IP addresses and interfaces.
+
+# 🔹 Wildcards & Globbing Patterns
+
+  * → Matches any number of characters (e.g., rm -fv ma* deletes all files starting with "ma").
+
+  ? → Matches a single character (e.g., rm -f messages? deletes messages0, messages1, etc.).
+
+  [] → Matches a range of characters (e.g., rm -vf messages[2-5]).
+
+  [!] → Matches characters NOT in the brackets (e.g., rm -fv messages[!1]).
+
+  {} → Matches a list of patterns (e.g., rm -vf {*.log,cron*,messages?}).
+
