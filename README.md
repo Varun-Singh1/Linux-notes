@@ -70,9 +70,9 @@ Utilities & Support Services – Includes tools for administration and maintenan
 ✅ Community Support – Large, active user and developer base.
 ✅ Free of Cost – Most Linux distributions are free to use.
 
-## Linux Distributions
+# ## Linux Distributions
 
-1. Debian Family
+# 1. Debian Family
 
 Base: Debian
 
@@ -80,9 +80,9 @@ Package Manager: apt
 
 File Format: .deb
 
-! Key Features: Stability, community-driven, extensive documentation.
+- ! Key Features: Stability, community-driven, extensive documentation.
 
-🔹 Popular Derivatives:
+# 🔹 Popular Derivatives:
 
 Ubuntu – User-friendly, widely used.
 
@@ -92,7 +92,7 @@ Kali Linux – Penetration testing and cybersecurity.
 
 Raspberry Pi OS – Optimized for Raspberry Pi.
 
-2. Red Hat Family
+# 2. Red Hat Family
 
 Base: Red Hat Enterprise Linux (RHEL)
 
@@ -100,9 +100,9 @@ Package Manager: dnf / yum
 
 File Format: .rpm
 
-! Key Features: Enterprise-focused, stable, and well-supported.
+- ! Key Features: Enterprise-focused, stable, and well-supported.
 
-🔹 Popular Derivatives:
+# 🔹 Popular Derivatives:
 
 CentOS Stream – Community-supported RHEL.
 
@@ -110,15 +110,15 @@ Fedora – Cutting-edge features.
 
 AlmaLinux & Rocky Linux – RHEL alternatives.
 
-3. Arch Family
+# 3. Arch Family
 
 Base: Arch Linux
 
 Package Manager: pacman
 
-! Key Features: Rolling release, minimalistic, highly customizable.
+- ! Key Features: Rolling release, minimalistic, highly customizable.
 
-🔹 Popular Derivatives:
+# 🔹 Popular Derivatives:
 
 Manjaro – User-friendly Arch with pre-configured tools.
 
