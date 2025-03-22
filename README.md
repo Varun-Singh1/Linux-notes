@@ -1,4 +1,4 @@
-## Linux Notes
+ ## Linux Notes
 
 # Introduction
 
@@ -202,9 +202,9 @@ The shell is the outer interface that allows users to interact with the system. 
       ~Runs Everywhere: From web servers to smartphones to IoT devices.
       ~Community Support: Millions of developers contribute to it.
 
-# Linux Basic Commands Cheat Sheet
+### Linux Basic Commands Cheat Sheet ### 
 
-# 🔹 System Information Commands
+## 📌🔹 System Information Commands
 
 1. hostname - Displays the system's DNS name and allows setting hostname or NIS domain name.
 
@@ -218,7 +218,7 @@ The shell is the outer interface that allows users to interact with the system. 
 
 3. pwd (Present Working Directory) - Prints the full path of the current directory.
 
-# 📂 File & Directory Management
+## 📌📂 File & Directory Management
 
 4. ls - Lists directory contents.
 
@@ -284,7 +284,7 @@ The shell is the outer interface that allows users to interact with the system. 
 
     cat /etc/resolv.conf - Displays DNS configurations.
 
-# 🌍 Network Configuration
+## 📌🌍. Network Configuration
 
 13. ifconfig - Displays network interfaces (deprecated, use ip a).
 
@@ -294,7 +294,7 @@ The shell is the outer interface that allows users to interact with the system. 
 
 14. ip a - Shows IP addresses and interfaces.
 
-# 🔹 Wildcards & Globbing Patterns
+## 📌🔹 Wildcards & Globbing Patterns
 
   * → Matches any number of characters e.g., rm -fv ma* deletes all files starting with "ma".
 
@@ -306,11 +306,10 @@ The shell is the outer interface that allows users to interact with the system. 
 
   {} → Matches a list of patterns (e.g., rm -vf {*.log,cron*,messages?}).
 
-# 🚀 Essential Linux Commands: A Quick Guide
 
-## 📌 . Linking Files: `ln` Command
+## 📌. Linking Files: `ln` Command
 
-### 🔹 Hard Link:
+15.🔹 Hard Link:
 - Creates a duplicate file that remains even if the original is deleted.
 - Requires the same storage as the original file.
 - **Example:**
@@ -318,227 +317,299 @@ The shell is the outer interface that allows users to interact with the system. 
   ln /var/log/messages my_hard_link
 Even after deleting the original file, my_hard_link retains all its content.
 
-🔹 Soft Link (Symbolic Link):
-Acts as a shortcut to the original file.
+16.🔹 Soft Link (Symbolic Link):
+- Acts as a shortcut to the original file.
+- Uses minimal space but breaks if the original file is deleted.
+- **Example:**
+  ```bash
+  ln -s /var/log/messages my_soft_link
 
-Uses minimal space but breaks if the original file is deleted.
+## 📌. Viewing Files
+17. 📖 less Command:
+- View large file content page by page.
+- Supports scrolling and navigation.
+- **Example:**
+  ```bash
+  less /var/log/messages.
 
+18. 📖 more Command:
+- Similar to less, but with limited navigation.
+- **Example:**
+  ```bash
+  more /var/log/messages
+## 📌. Terminal Types 
+19. tty Command: 
+- tty displays the terminal type: tty (physical terminal) or pts (pseudo-terminal session).
+- **Example:**
+  ```bash
+  tty
+## 📌. User Commands
+19. 👤 whoami - Shows the current logged-in user.
+- **Example:**
+  ```bash
+  whoami
+20. 👥 who - Displays all active users.
+- **Example:**
+  ```bash
+  who
+## 📌. System Information Commands
+21. uname :-
+a. uname -a : 🖥 Kernel & System Details
+- Get full system info
+- **Exmaple:**
+  ```bash
+    uname -a
+b. uname -r : View kernel version:
+- **Example:**
+  ```bash
+  uname -r
+22. lscpu : ⚙️ Hardware Information:
+- CPU details:
+- **Example:**
+  ```bash
+  lscpu
+23. lsusb : USB devices
+- **Example:**
+  ```bash
+  lsusb
+24. lspci : PCI slots
+- **Example:**
+  ```bash
+  lspci
+25. lsblk : Disk details
+- **Example:**
+  ```bash
+  lsblk
+26. free :  RAM usage:
+- **Example:**
+  ```bash
+  free -h
+## 📌. Date and Time
+27. date : View current date & time:
+- **Example:**
+  ```bash
+  date
+  Format date:
+- **Example:**
+  ```bash
+  date "+%d-%m-%y %H:%M:%S"
+28. cal: View calendar
+- **Example:**
+  ```bash
+  cal 2025
+## 📌 8. History $ Logging
+29. history : View command history
+- **Example:**
+  ```bash
+  history
+  Clear history:
+30. ln : logging details
+- **Example:**
+  ```bash
+  ln -s /dev/null .bash_history
+31. !723: Run previous commands:
+- **Example:**
+  ```bash
+  !763  # Runs command #763
+  !rm   # Runs the last command starting with 'rm'
+## 📌. Miscellaneous Commands
+32. /dev/null:  Blackhole directory (/dev/null)
+- **Example:**
+  ```bash
+  cat /dev/null  # Clears output
+33. echo: 📝 Print text using echo
+- **Example:**
+  ```bash
+  echo "Hello, Linux!"
+34. uptime: 🕒 Check system uptime:
+- **Example:**
+  ```bash
+  uptime
+## 📌. Session Management
+35. exit: to exit terminal
+- **Example:**
+  ```bash
+  exit
+36. logout: 🚪 Logout from session
+- **Example:**
+  ```bash
+  logout
+## 📌. Shutdown & Restart
+37. shutdown:
+a. shutdown -P now : 🛑 Shutdown system:
+- **Example:**
+  ```bash
+  shutdown -P now
+b. shutdown -c: ❌ Cancel scheduled shutdown:
+- **Example:**
+  ```bash
+  shutdown -c
+c. 🔄 Restart system:
+- **Example:**
+  ```bash
+
+38. halt : ⚡ Immediate power off
+- **Example:**
+  ```bash
+  halt
+39. reboot : ♻️ Reboot system:
+- **Example:**
+  ```bash
+  reboot
+40. init : 🔌 Power off using init commands:
+- **Example:**
+  ```bash
+  init 0  # Shutdown
+  init 6  # Restart
+## 📌. Pipes and Redirection
+To run multiple commands in one command, we can use `;` or `&&` between different commands:
+```sh
+id ; ls ; date ; ip a ; pwd
+id && ls && date && ip a && pwd
+```
+
+##📌.String Processing Commands
+### 41. `grep`
+Filters lines containing a specific word from any command output.
+```sh
+grep root /etc/passwd  # Shows only lines with 'root' in /etc/passwd
+```
+### 42. `awk`
+Powerful text processing tool (Example pending).
+### 43. `sed`
+Stream editor for filtering and transforming text (Example pending).
+
+## 📌. File Finding Command
+### 44. `find`
+Used to search for files in a directory hierarchy.
+
+##📌. Text Editors
+### Command-line Text Editors
+#### 45.  Vim/Vi
+Features:
+- Modes: Insert, Command, Visual.
+- Lightweight and available on almost all Linux systems.
+- Syntax highlighting and plugin support (Vim).
+
+Basic Commands:
+```sh
+# Insert mode
+Press i
+
+# Save and exit
+:wq!
+
+# Exit without saving
+:q!
+```
+####46.  Nano
+Features:
+- User-friendly and simple.
+- Displays shortcuts at the bottom.
+
+Basic Commands:
+```sh
+Ctrl+O  # Save file
+Ctrl+X  # Exit editor
+Ctrl+K  # Cut text
+Ctrl+U  # Paste text
+```
+#### 47. Cat
+Used for reading file content but not ideal for large files.
+
+## 📌. Compression Tools
+- `bzip2` : `bzip2 messages`
+- `gzip` : `gzip messages1`
+- `zip` : `zip messages2.zip messages2`
+- `7za` : `7za a messages3.7z messages3`
+- `tar` :
+  ```sh
+  tar -cvf messages4.tar messages4   # Create a tar archive
+  tar -xvf messages4.tar             # Extract a tar archive
+  tar -czvf messages5.tgz messages5  # Create a compressed tar archive
+  tar -cjvf messages6.tbz messages6  # Create a bzip2 compressed archive
+  ```
+
+##📌. Sorting and Processing Text
+### 48. `sort`
+Sorts text in various ways.
+```sh
+sort -n file.txt   # Sort numerically
+sort -r file.txt   # Sort in reverse order
+```
+### 49. `head` and `tail`
+- `head -n 10 file.txt` → Display first 10 lines.
+- `tail -n 10 file.txt` → Display last 10 lines.
+### 50. `wc` (Word Count)
+```sh
+wc -l file.txt  # Count lines
+```
+### 51. `cut` and `paste`
+- `cut -d: -f1 /etc/passwd` → Extract first field from `/etc/passwd`
+- `paste file1 file2` → Merge lines from two files.
+
+### 📌. User & Group Management ###
+A user account in Linux allows individuals or processes to log in and access the system with specific permissions.
+
+### Key Components of a User Account
+- **Username**: Unique identifier (e.g., `sachin`, `admin`).
+- **UID (User ID)**: Unique numerical ID (e.g., `0` for root).
+- **GID (Group ID)**: Specifies the primary group.
+- **Home Directory**: Personal storage (`/home/username`).
+- **Shell**: Default command-line interpreter (`/bin/bash`).
+- **Password**: Stored encrypted in `/etc/shadow`.
+
+### 📌. System Files ###
+#### `/etc/passwd`
+```sh
+cat /etc/passwd
+```
+Format:
+```plaintext
+[User]  :[x]  :[UID]  :[Comment]  :[Home directory]  :[Default shell]
+```
 Example:
-
-bash
-Copy
-Edit
-ln -s /var/log/messages my_soft_link
-📌 2. Viewing Files
-📖 less Command:
-View large file content page by page.
-
-Supports scrolling and navigation.
-
+```plaintext
+root     :x     :0      :root      :/root       :/bin/bash
+armour   :x     :1000   :Armour    :/home/armour :/bin/bash
+```
+#### `/etc/shadow`
+```sh
+cat /etc/shadow
+```
+Format:
+```plaintext
+[User]  :[Encrypted Password]  :[Last pass change]  :[Min pass age]  :[Max pass age]  :[Warning period]  :[Inact period]  :[Exp date]  :[Unused]
+```
 Example:
-
-bash
-Copy
-Edit
-less /var/log/messages
-📖 more Command:
-Similar to less, but with limited navigation.
-
+```plaintext
+root     :$6$ot1LMMm5ih8sJUM4$Q  : 17110  : 0  : 99999  : 7  :  :  :
+```
+### `/etc/group`
+```sh
+cat /etc/group
+```
+Format:
+```plaintext
+[group]  :[x]  :[GID]  :[Comma-separated list of users]
+```
 Example:
+```plaintext
+root      :x   :0   :
+armour    :x   :1000 :armour
+```
 
-bash
-Copy
-Edit
-more /var/log/messages
-📌 3. Terminal Types: tty Command
-tty displays the terminal type: tty (physical terminal) or pts (pseudo-terminal session).
+### `/etc/gshadow`
+```sh
+cat /etc/gshadow
+```
+Format:
+```plaintext
+[group]  :[Encrypted password]  :[Group administrators]  :[Group members]
+```
 
-Example:
-
-bash
-Copy
-Edit
-tty
-📌 4. User Commands
-👤 whoami - Shows the current logged-in user.
-Example:
-
-bash
-Copy
-Edit
-whoami
-👥 who - Displays all active users.
-Example:
-
-bash
-Copy
-Edit
-who
-📌 5. System Information Commands
-🖥 Kernel & System Details:
-Get full system info:
-
-bash
-Copy
-Edit
-uname -a
-View kernel version:
-
-bash
-Copy
-Edit
-uname -r
-⚙️ Hardware Information:
-CPU details:
-
-bash
-Copy
-Edit
-lscpu
-USB devices:
-
-bash
-Copy
-Edit
-lsusb
-PCI slots:
-
-bash
-Copy
-Edit
-lspci
-Disk details:
-
-bash
-Copy
-Edit
-lsblk
-RAM usage:
-
-bash
-Copy
-Edit
-free -h
-📌 6. Date and Time
-View current date & time:
-
-bash
-Copy
-Edit
-date
-Format date:
-
-bash
-Copy
-Edit
-date "+%d-%m-%y %H:%M:%S"
-View calendar:
-
-bash
-Copy
-Edit
-cal 2025
-📌 7. Network Commands
-View IP addresses:
-
-bash
-Copy
-Edit
-ip a
-View gateway details:
-
-bash
-Copy
-Edit
-route -n
-📌 8. History & Logging
-View command history:
-
-bash
-Copy
-Edit
-history
-Clear history:
-
-bash
-Copy
-Edit
-ln -s /dev/null .bash_history
-Run previous commands:
-
-bash
-Copy
-Edit
-!763  # Runs command #763
-!rm   # Runs the last command starting with 'rm'
-📌 9. Miscellaneous Commands
-🕳 Blackhole directory (/dev/null):
-
-bash
-Copy
-Edit
-cat /dev/null  # Clears output
-📝 Print text using echo:
-
-bash
-Copy
-Edit
-echo "Hello, Linux!"
-🕒 Check system uptime:
-
-bash
-Copy
-Edit
-uptime
-📌 10. Session Management
-🔚 Exit terminal:
-
-bash
-Copy
-Edit
-exit
-🚪 Logout from session:
-
-bash
-Copy
-Edit
-logout
-📌 11. Shutdown & Restart
-🛑 Shutdown system:
-
-bash
-Copy
-Edit
-shutdown -P now
-❌ Cancel scheduled shutdown:
-
-bash
-Copy
-Edit
-shutdown -c
-🔄 Restart system:
-
-bash
-Copy
-Edit
-shutdown -r now
-⚡ Immediate power off:
-
-bash
-Copy
-Edit
-halt
-♻️ Reboot system:
-
-bash
-Copy
-Edit
-reboot
-🔌 Power off using init commands:
-
-bash
-Copy
-Edit
-init 0  # Shutdown
-init 6  # Restart
+## Benefits of Using Groups
+- **Access Control**: Manages file permissions efficiently.
+- **Simplified Administration**: Reduces complexity.
+- **Collaboration**: Facilitates shared resource access.
 
