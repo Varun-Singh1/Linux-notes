@@ -202,7 +202,7 @@ The shell is the outer interface that allows users to interact with the system. 
       ~Runs Everywhere: From web servers to smartphones to IoT devices.
       ~Community Support: Millions of developers contribute to it.
 
-### Linux Basic Commands Cheat Sheet ### 
+### 📌 Linux Basic Commands Cheat Sheet ### 
 
 ## 📌🔹 System Information Commands
 
