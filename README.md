@@ -296,13 +296,249 @@ The shell is the outer interface that allows users to interact with the system. 
 
 # 🔹 Wildcards & Globbing Patterns
 
-  * → Matches any number of characters (e.g., rm -fv ma* deletes all files starting with "ma").
+  * → Matches any number of characters e.g., rm -fv ma* deletes all files starting with "ma".
 
-  ? → Matches a single character (e.g., rm -f messages? deletes messages0, messages1, etc.).
+  ? → Matches a single character e.g., rm -f messages? deletes messages0, messages1, etc.
 
   [] → Matches a range of characters (e.g., rm -vf messages[2-5]).
 
   [!] → Matches characters NOT in the brackets (e.g., rm -fv messages[!1]).
 
   {} → Matches a list of patterns (e.g., rm -vf {*.log,cron*,messages?}).
+
+# 🚀 Essential Linux Commands: A Quick Guide
+
+## 📌 . Linking Files: `ln` Command
+
+### 🔹 Hard Link:
+- Creates a duplicate file that remains even if the original is deleted.
+- Requires the same storage as the original file.
+- **Example:**
+  ```bash
+  ln /var/log/messages my_hard_link
+Even after deleting the original file, my_hard_link retains all its content.
+
+🔹 Soft Link (Symbolic Link):
+Acts as a shortcut to the original file.
+
+Uses minimal space but breaks if the original file is deleted.
+
+Example:
+
+bash
+Copy
+Edit
+ln -s /var/log/messages my_soft_link
+📌 2. Viewing Files
+📖 less Command:
+View large file content page by page.
+
+Supports scrolling and navigation.
+
+Example:
+
+bash
+Copy
+Edit
+less /var/log/messages
+📖 more Command:
+Similar to less, but with limited navigation.
+
+Example:
+
+bash
+Copy
+Edit
+more /var/log/messages
+📌 3. Terminal Types: tty Command
+tty displays the terminal type: tty (physical terminal) or pts (pseudo-terminal session).
+
+Example:
+
+bash
+Copy
+Edit
+tty
+📌 4. User Commands
+👤 whoami - Shows the current logged-in user.
+Example:
+
+bash
+Copy
+Edit
+whoami
+👥 who - Displays all active users.
+Example:
+
+bash
+Copy
+Edit
+who
+📌 5. System Information Commands
+🖥 Kernel & System Details:
+Get full system info:
+
+bash
+Copy
+Edit
+uname -a
+View kernel version:
+
+bash
+Copy
+Edit
+uname -r
+⚙️ Hardware Information:
+CPU details:
+
+bash
+Copy
+Edit
+lscpu
+USB devices:
+
+bash
+Copy
+Edit
+lsusb
+PCI slots:
+
+bash
+Copy
+Edit
+lspci
+Disk details:
+
+bash
+Copy
+Edit
+lsblk
+RAM usage:
+
+bash
+Copy
+Edit
+free -h
+📌 6. Date and Time
+View current date & time:
+
+bash
+Copy
+Edit
+date
+Format date:
+
+bash
+Copy
+Edit
+date "+%d-%m-%y %H:%M:%S"
+View calendar:
+
+bash
+Copy
+Edit
+cal 2025
+📌 7. Network Commands
+View IP addresses:
+
+bash
+Copy
+Edit
+ip a
+View gateway details:
+
+bash
+Copy
+Edit
+route -n
+📌 8. History & Logging
+View command history:
+
+bash
+Copy
+Edit
+history
+Clear history:
+
+bash
+Copy
+Edit
+ln -s /dev/null .bash_history
+Run previous commands:
+
+bash
+Copy
+Edit
+!763  # Runs command #763
+!rm   # Runs the last command starting with 'rm'
+📌 9. Miscellaneous Commands
+🕳 Blackhole directory (/dev/null):
+
+bash
+Copy
+Edit
+cat /dev/null  # Clears output
+📝 Print text using echo:
+
+bash
+Copy
+Edit
+echo "Hello, Linux!"
+🕒 Check system uptime:
+
+bash
+Copy
+Edit
+uptime
+📌 10. Session Management
+🔚 Exit terminal:
+
+bash
+Copy
+Edit
+exit
+🚪 Logout from session:
+
+bash
+Copy
+Edit
+logout
+📌 11. Shutdown & Restart
+🛑 Shutdown system:
+
+bash
+Copy
+Edit
+shutdown -P now
+❌ Cancel scheduled shutdown:
+
+bash
+Copy
+Edit
+shutdown -c
+🔄 Restart system:
+
+bash
+Copy
+Edit
+shutdown -r now
+⚡ Immediate power off:
+
+bash
+Copy
+Edit
+halt
+♻️ Reboot system:
+
+bash
+Copy
+Edit
+reboot
+🔌 Power off using init commands:
+
+bash
+Copy
+Edit
+init 0  # Shutdown
+init 6  # Restart
 
